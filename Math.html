@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Math</title>
+
+    <!-- Function Grapher Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/2.4.0/math.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+    <script src="https://brcdn.org/RbDt4b0Shej4JLF7KBQEilNbIiI.js"></script>
+    
+    
+
+    <!-- Firebase JS Library -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+
+    
+    
+    <!--Bootstrap Js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!--jQuery-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- Script para las conversiones -->
+    <script type="text/javascript" src="js/math-script.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="Math/css/mathcss.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="Math/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+    <!--Imagen para fondo de inicio = https://www.rmit.edu.au/media/public-site-media-production/rmit-images/marketing-only/ia--sia/Chemistry-1920x960.jpg -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$ ( "#menu-close").click();>Maths</a>
+            </li>
+            <li>
+                <a href="#top" onclick=$ ( "#menu-close").click();>Home</a>
+            </li>
+
+            <li>
+                <a href="#services" onclick=$ ( "#menu-close").click();>Services</a>
+            </li>
+
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1 style="color:#2cb202">Maths</h1>
+            <!--<h3 style="color:#aadbd9">Units Conversor & Element Database</h3>-->
+            <br>
+            <a href="#services" class="btn btn-dark btn-lg" style="background-color:#aadbd9">Find Out More</a>
+        </div>
+    </header>
+
+
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2>Units Converters</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                    <img src="Math/img/function.png"></img>
+                            </span>
+                                <h4>
+                                    <strong>Function Grapher</strong>
+                                </h4>
+                                <p>Click the Launch button, to launch the function grapher</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="color:#FFFFFF;background-color:#F60">
+                                    Launch Function Grapher
+                                </button>
+                                <!-- Boton para Function -->
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="colorcitoPambisito" style="color:#35CA9A"> Function Grapher</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group">
+                                                <form id="form">
+                                                  <label for="eq"style="color:#000000">Enter an equation:</label>
+                                                      <input type="text" id="eq" value="f(x) = 4 * sin(x) + 5 * cos(x/2)" style="color:#000000"/>
+                                                         <input type="submit" value="Draw" style="color:#000000"/>
+                                                            </form>
+
+                                                            <div id="plot"></div>
+                                                
+                                                    <div class="input-group-btn">
+                                                        
+                                                       
+                                                    </div>
+                                                    <!-- /btn-group -->
+                                                    <!-- Div con el boton Convert To, y las opciones Kg Gr -->
+                                                </div>
+                                                <!-- /input-group -->
+                                                <!-- Grupo Input para Quantity y Unit -->
+                                            </div>
+
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.col-lg-6 -->
+                                </div>
+                                <!-- /.row -->
+                                <!-- Input y boton Convert To -->
+                            </div>
+                        </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                        <img src="Math/img/math6.png"></img>
+                            </span>
+                                        <h4>
+                                    <strong>Quadratic Equation Solver</strong>
+                                </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2" style="background-color:#F93738">
+                                            Launch Quadratic Equation Solver
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Mass Converter</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="QuantityMassMol" placeholder="Quantity in grams" id="QuantityMassMol">
+                                                            <input type="text" class="form-control" placeholder="Formula" aria-describedby="basic-addon1" name="InputChemFormula" id="InputChemFormula">
+
+
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn btn-default btn-lg9" id="Mol"> Convert to mol</button>
+
+                                                            </div>
+                                                            <!-- /btn-group -->
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                    </div>
+
+                                                </div>
+                                                <!-- /.row -->
+                                            </div>
+                                            <!-- /.col-lg-6 -->
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                        <img src="Math/img/chart15.png"></img>
+                            </span>
+                                        <h4>
+                                    <strong>Grapher</strong>
+                                </h4>
+                                        <p>This converter only accepts Kelvin (K), Fahrenheit (F) and Celsius (C).</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal13" style="background-color:#35CA9A">
+                                            Launch Grapher
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Temperature Converter</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="QuantityTemperature1" placeholder="Temperature">
+                                                            <input type="text" class="form-control" placeholder="Units" aria-describedby="basic-addon1" name="UnitsTemperature1">
+
+
+
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convert To <span class="caret"></span></button>
+                                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                                    <li><a href="#services" id="K">K</a></li>
+                                                                    <li><a href="#services" id='C'>&deg;C</a></li>
+                                                                    <li><a href="#services" id="F">&deg;F</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- /btn-group -->
+                                                            <!-- Div con el boton Convert To, y las opciones K C F -->
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                        <!-- Grupo Input para Quantity y Unit -->
+                                                        <p> </p>
+                                                        <p id="ResultTemperature" style='color:#929797'></p>
+
+
+
+
+                                                        <p style="color:#341000">For input of Celsius or Fahrenheit, use C or F</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <p>&nbsp;</p>
+                            <hr hr width="100%" />
+                            
+                            <p>&nbsp;</p>
+
+                                        </div>
+                                        <!-- /.row (nested) -->
+                                    </div>
+                                    <!-- /.col-lg-10 -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.container -->
+    </section>
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+    </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

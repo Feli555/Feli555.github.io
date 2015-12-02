@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Chemistry</title>
+
+    <!-- Balancer Library -->
+    <script type="application/javascript" src="http://www.nayuki.io/res/chemical-equation-balancer-javascript.js"></script>
+    
+
+    <!-- Firebase JS Library -->
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+
+
+    
+    
+    <!--Bootstrap Js-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <!--jQuery-->
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- Script para las conversiones -->
+    <script type="text/javascript" src="js/chem-script.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="Chem/css/stylish-portfolio.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="Chem/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+    <!--Imagen para fondo de inicio = https://www.rmit.edu.au/media/public-site-media-production/rmit-images/marketing-only/ia--sia/Chemistry-1920x960.jpg -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+
+
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top" onclick=$ ( "#menu-close").click();>Chemistry</a>
+            </li>
+            <li>
+                <a href="#top" onclick=$ ( "#menu-close").click();>Home</a>
+            </li>
+
+            <li>
+                <a href="#services" onclick=$ ( "#menu-close").click();>Services</a>
+            </li>
+            <li>
+                <a href="#contact" onclick=$ ( "#menu-close").click();>Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <h1>Chemistry</h1>
+            <h3 style="color:#929797">Units Conversor & Element Database</h3>
+            <br>
+            <a href="#services" class="btn btn-dark btn-lg">Find Out More</a>
+        </div>
+    </header>
+
+
+
+    <!-- Services -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <section id="services" class="services bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-12">
+                    <h2>Units Converters</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-calculator"></i>
+                            </span>
+                                <h4>
+                                    <strong> Kg to gr</strong>
+                                </h4>
+                                <p>Click the Launch button, to launch the unit conversor</p>
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" style="color:#FFFFFF;background-color:#F60">
+                                    Launch Kg to gr
+                                </button>
+                                <!-- Boton para Kg to Gr -->
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="colorcitoPambisito" style="color:#35CA9A"> Mass Converter</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="input-group">
+                                                    <input type="text" class="form-control" name="QuantityMass1" placeholder="Quantity">
+                                                    <input type="text" class="form-control" placeholder="Units" aria-describedby="basic-addon1" name="UnitsMass1">
+                                                    <p id="ResultMass" style='color:#929797'></p>
+                                                    <div class="input-group-btn">
+                                                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convert To <span class="caret"></span></button>
+                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                            <li><a href="#services" id="kg">Kg</a></li>
+                                                            <li><a href="#services" id='g'>g</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <!-- /btn-group -->
+                                                    <!-- Div con el boton Convert To, y las opciones Kg Gr -->
+                                                </div>
+                                                <!-- /input-group -->
+                                                <!-- Grupo Input para Quantity y Unit -->
+                                            </div>
+
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.col-lg-6 -->
+                                </div>
+                                <!-- /.row -->
+                                <!-- Input y boton Convert To -->
+                            </div>
+                        </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                <i class="fa fa-flask fa-stack-1x "></i>
+
+                            </span>
+                                        <h4>
+                                    <strong> Grams to mol</strong>
+                                </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit <h3 style="color:#E2231A">(BETA)</h3>.</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal2" style="background-color:#F93738">
+                                            Launch Gr to mol <h3 style="color:#E2231A">(BETA)</h3>
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Mass Converter</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="QuantityMassMol" placeholder="Quantity in grams" id="QuantityMassMol">
+                                                            <input type="text" class="form-control" placeholder="Formula" aria-describedby="basic-addon1" name="InputChemFormula" id="InputChemFormula">
+
+
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn btn-default btn-lg9" id="Mol"> Convert to mol</button>
+
+                                                            </div>
+                                                            <!-- /btn-group -->
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                    </div>
+
+                                                </div>
+                                                <!-- /.row -->
+                                            </div>
+                                            <!-- /.col-lg-6 -->
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                      
+                             <img src="Chem/img/mercury12.png"></img>
+                            </span>
+
+                                        <h4>
+                                    <strong>Temperature Conversions</strong>
+                                </h4>
+                                        <p>This converter only accepts Kelvin (K), Fahrenheit (F) and Celsius (C).</p>
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal13" style="background-color:#35CA9A">
+                                            Launch Temperature Converter
+                                        </button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Temperature Converter</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="QuantityTemperature1" placeholder="Temperature">
+                                                            <input type="text" class="form-control" placeholder="Units" aria-describedby="basic-addon1" name="UnitsTemperature1">
+
+
+
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convert To <span class="caret"></span></button>
+                                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                                    <li><a href="#services" id="K">K</a></li>
+                                                                    <li><a href="#services" id='C'>&deg;C</a></li>
+                                                                    <li><a href="#services" id="F">&deg;F</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- /btn-group -->
+                                                            <!-- Div con el boton Convert To, y las opciones K C F -->
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                        <!-- Grupo Input para Quantity y Unit -->
+                                                        <p> </p>
+                                                        <p id="ResultTemperature" style='color:#929797'></p>
+
+
+
+
+                                                        <p style="color:#341000">For input of Celsius or Fahrenheit, use C or F</p>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <p>&nbsp;</p>
+                            <hr hr width="100%" />
+                            
+                            <p>&nbsp;</p>
+
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                        <img src="Chem/img/volumetric1.png"></img>
+                            </span>
+                
+                                        
+                                        
+                                        
+                                        
+                                        <h4>
+                                    <strong>Volume Conversions</strong>
+                                </h4>
+                                        <p>This converter only accepts milliliters(mL), liters(L), cubic centimeters(cm&sup3;), cubic meters(m&sup3;), cubic feet(ft&sup3;) </p>
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal14" style="background-color:#00B3EE">
+                                            Launch Volume Converter
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Volume Converter</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="QuantityVolume1" placeholder="Volume">
+                                                            <input type="text" class="form-control" placeholder="Units" aria-describedby="basic-addon1" name="UnitsVolume1">
+
+
+
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Convert To <span class="caret"></span></button>
+                                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                                    <li><a href="#services" id="L">L</a></li>
+                                                                    <li><a href="#services" id='mL'>mL</a></li>
+                                                                    <li><a href="#services" id="cm3">cm&sup3;</a></li>
+                                                                    <li><a href="#services" id="m3">m&sup3;</a></li>
+                                                                    <li><a href="#services" id="ft3">ft&sup3;</a></li>
+                                                                </ul>
+                                                            </div>
+                                                            <!-- /btn-group -->
+                                                            <!-- Div con el boton Convert To, y las opciones K C F -->
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                        <!-- Grupo Input para Quantity y Unit -->
+                                                        <p> </p>
+                                                        <p id="ResultVolume" style='color:#929797'></p>
+
+
+
+
+                                                        <!-- <p style="color:#341000">For input of Celsius or Fahrenheit, use C or F</p> -->
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                    <img src="Chem/img/periodic-table.png"></img>                                
+                            </span>
+                                        <h4>
+                                    <strong>Element Database</strong>
+                                </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal15" style="background-color:#8CC3AB">
+                                            Launch Element Database
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Element Database</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="ChemElement" placeholder="Element" id="ChemElement">
+
+
+
+                                                            <div class="input-group-btn">
+                                                                <button type="button" class="btn btn-default "  aria-haspopup="true" aria-expanded="false" id='SearchELement'>Search </button>
+
+                                                            </div>
+                                                            <!-- /btn-group -->
+                                                            <!-- Div con el boton Convert To, y las opciones K C F -->
+                                                        </div>
+                                                        <!-- /input-group -->
+                                                        <!-- Grupo Input para Quantity y Unit -->
+                                                        <p> </p>
+                                                        <p id="ResultDataWeight" style='color:#929797'></p>
+                                                        <p id="ResultDataSymbol" style='color:#929797'></p>
+
+
+
+                                                        <!-- <p style="color:#341000">For input of Celsius or Fahrenheit, use C or F</p> -->
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+                                        <!-- /.row (nested) -->
+                                    </div>
+                                    <!-- /.col-lg-10 -->
+                                </div>
+                                <!-- /.row -->
+                            <div class="col-md-4 col-sm-6">
+                                    <div class="service-item">
+                                        <span class="fa-stack fa-4x">
+                                    <i class="fa fa-exchange"></i>
+                            </span>
+                                        <h4>
+                                    <strong>Chemistry Equation Balancer</strong>
+                                </h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal17" style="background-color:#6a4711">
+                                            Launch Equation Balancer
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        <h4 class="colorcitoPambisito" style="color:#35CA9A"> Element Database</h4>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <form action="#" method="get">
+	<table class="noborder">
+		<tbody>
+			<tr>
+				<td><label for="inputFormula" style="color:#000000">Input:</label></td>
+				<td>
+					<input type="text" id="inputFormula" autocomplete="off" style="width:30em; font-family:serif; color:#000000"/>
+					<input type="submit" value="Balance" id="balancea" style="color:#000000"/>
+					<input type="button" value="Random" id="randomiza" style ="color:#000000"/>
+				</td>
+			</tr>
+			<tr style="height:3em">
+				<td style="vertical-align:middle; color:#000000">Balanced:</td>
+				<td><span id="balanced" style="font-family:serif; font-size:150%; line-height:1.6; color:#000000"></span><span id="message"></span></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><code id="codeOutput">&#xA0;</code></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
+                                                       
+
+
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+
+
+
+
+
+                                        </div>
+                                        <!-- /.row (nested) -->
+                                    </div>
+                                    <!-- /.col-lg-10 -->
+                                </div>
+                                <!-- /.row -->
+                            </div>
+                            <!-- /.container -->
+    </section>
+
+
+
+
+
+
+
+
+    </div>
+    </div>
+    </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+        // Closes the sidebar menu
+        $("#menu-close").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+
+        // Opens the sidebar menu
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#sidebar-wrapper").toggleClass("active");
+        });
+
+        // Scrolls to the selected menu item on the page
+        $(function() {
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
